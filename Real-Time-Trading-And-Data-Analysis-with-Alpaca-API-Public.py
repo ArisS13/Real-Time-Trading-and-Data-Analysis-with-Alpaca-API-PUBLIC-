@@ -19,7 +19,7 @@ def order():
         if accountType == "Paper":
             ALPACA_API_KEY = input(str("Input your Alpaca API Key here: "))
             ALPACA_SECRET_KEY = input(str("Input you Alpaca Secret Key here: "))
-            trading_client_paper = api.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, "https://api.alpaca.markets")
+            trading_client_paper = TradingClient(ALPACA_API_KEY, ALPACA_SECRET_KEY)
             print("Account Number: ", trading_client_paper.get_account().account_number)
             print("Buying Power: ", trading_client_paper.get_account().buying_power)
             print("Balance: ", trading_client_paper.get_account().cash)
@@ -159,7 +159,7 @@ def order():
         if accountType == "Paper":
             ALPACA_API_KEY = input(str("Input your Alpaca API Key here: "))
             ALPACA_SECRET_KEY = input(str("Input you Alpaca Secret Key here: "))
-            trading_client_paper = api.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, "https://api.alpaca.markets")
+            trading_client_paper = TradingClient(ALPACA_API_KEY, ALPACA_SECRET_KEY)
             print("Account Number: ", trading_client_paper.get_account().account_number)
             print("Buying Power: ", trading_client_paper.get_account().buying_power)
             print("Balance: ", trading_client_paper.get_account().cash)
